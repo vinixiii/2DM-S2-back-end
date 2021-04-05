@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vinixiii\\Desktop\\2DM-S2-back-end\\api-postman\\exercicios\\01_peoples\\senai_peoples_webApi\\senai_peoples_webApi\\senai_peoples_webApi.csproj": {}
+    "C:\\Users\\vinixiii\\Desktop\\2DM-S2-back-end\\api-postman\\exercicios\\01_peoples\\Senai_Peoples_WebAPI\\Senai_Peoples_WebAPI\\Senai_Peoples_WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vinixiii\\Desktop\\2DM-S2-back-end\\api-postman\\exercicios\\01_peoples\\senai_peoples_webApi\\senai_peoples_webApi\\senai_peoples_webApi.csproj": {
+    "C:\\Users\\vinixiii\\Desktop\\2DM-S2-back-end\\api-postman\\exercicios\\01_peoples\\Senai_Peoples_WebAPI\\Senai_Peoples_WebAPI\\Senai_Peoples_WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vinixiii\\Desktop\\2DM-S2-back-end\\api-postman\\exercicios\\01_peoples\\senai_peoples_webApi\\senai_peoples_webApi\\senai_peoples_webApi.csproj",
-        "projectName": "senai_peoples_webApi",
-        "projectPath": "C:\\Users\\vinixiii\\Desktop\\2DM-S2-back-end\\api-postman\\exercicios\\01_peoples\\senai_peoples_webApi\\senai_peoples_webApi\\senai_peoples_webApi.csproj",
+        "projectUniqueName": "C:\\Users\\vinixiii\\Desktop\\2DM-S2-back-end\\api-postman\\exercicios\\01_peoples\\Senai_Peoples_WebAPI\\Senai_Peoples_WebAPI\\Senai_Peoples_WebAPI.csproj",
+        "projectName": "Senai_Peoples_WebAPI",
+        "projectPath": "C:\\Users\\vinixiii\\Desktop\\2DM-S2-back-end\\api-postman\\exercicios\\01_peoples\\Senai_Peoples_WebAPI\\Senai_Peoples_WebAPI\\Senai_Peoples_WebAPI.csproj",
         "packagesPath": "C:\\Users\\vinixiii\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vinixiii\\Desktop\\2DM-S2-back-end\\api-postman\\exercicios\\01_peoples\\senai_peoples_webApi\\senai_peoples_webApi\\obj\\",
+        "outputPath": "C:\\Users\\vinixiii\\Desktop\\2DM-S2-back-end\\api-postman\\exercicios\\01_peoples\\Senai_Peoples_WebAPI\\Senai_Peoples_WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vinixiii\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

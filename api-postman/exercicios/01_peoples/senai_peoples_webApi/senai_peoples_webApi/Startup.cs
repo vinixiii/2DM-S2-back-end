@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace senai_peoples_webApi
+namespace Senai_Peoples_WebAPI
 {
     public class Startup
     {
@@ -16,6 +16,8 @@ namespace senai_peoples_webApi
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            //Define o uso de controllers
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -30,10 +32,8 @@ namespace senai_peoples_webApi
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+                //Define o mapeamento dos controllers
+                endpoints.MapControllers();
             });
         }
     }

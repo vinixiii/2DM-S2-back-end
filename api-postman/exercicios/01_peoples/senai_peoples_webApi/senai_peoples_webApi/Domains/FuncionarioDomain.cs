@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace senai_peoples_webApi.Domains
+namespace Senai_Peoples_WebAPI.Domains
 {
     /// <summary>
     /// Classe que representa a entidade Funcionarios
     /// </summary>
-    public class FuncionariosDomain
+    public class FuncionarioDomain
     {
         //Campo 'IdFuncionario' da tabela do banco de dados
         public int IdFuncionario { get; set; }
