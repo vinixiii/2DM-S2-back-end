@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Senai_InLock_WebAPI</name>
+    </assembly>
+    <members>
+        <member name="P:Senai_InLock_WebAPI.Controllers.EstudiosController._EstudioRepository">
+            <summary>
+            Objeto que recebe os métodos definidos na interface IEstudioRepository
+            </summary>
+        </member>
+        <member name="M:Senai_InLock_WebAPI.Controllers.EstudiosController.#ctor">
+            <summary>
+            Instancia o objeto _EstudioRepository para referenciar os métodos no repositório
+            </summary>
+        </member>
+        <member name="M:Senai_InLock_WebAPI.Controllers.EstudiosController.ListarEstudios">
+            <summary>
+            Lista todos os estúdios
+            </summary>
+            <returns>Um status code 200(ok) junto com as informações dos estúdios</returns>
+        </member>
+        <member name="P:Senai_InLock_WebAPI.Controllers.JogosController._JogoRepository">
+            <summary>
+            Objeto que recebe os métodos definidos na interface IJogoRepository
+            </summary>
+        </member>
+        <member name="M:Senai_InLock_WebAPI.Controllers.JogosController.#ctor">
+            <summary>
+            Instancia o objeto _JogoRepository para referenciar os métodos no repositório
+            </summary>
+        </member>
+        <member name="M:Senai_InLock_WebAPI.Controllers.JogosController.ListarJogos">
+            <summary>
+            Lista todos os jogos
+            </summary>
+            <returns>Um status code 200(ok) junto com as informações dos jogos</returns>
+        </member>
+        <member name="M:Senai_InLock_WebAPI.Controllers.JogosController.CadastarJogo(Senai_InLock_WebAPI.Domains.JogoDomain)">
+            <summary>
+            Cadastra um novo jogo
+            </summary>
+            <param name="jogo">Objeto com as informações do jogo que será cadastrado</param>
+            <returns>Um status code 201(created)</returns>
+        </member>
+        <member name="M:Senai_InLock_WebAPI.Controllers.JogosController.DeletarJogo(System.Int32)">
+            <summary>
+            Deleta um jogo
+            </summary>
+            <param name="id">Id do jogo que será deletado</param>
+            <returns>Um status code 204(no content)</returns>
+        </member>
+        <member name="M:Senai_InLock_WebAPI.Controllers.UsuariosController.Login(Senai_InLock_WebAPI.Domains.UsuarioDomain)">
+            <summary>
+            Faz o login
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST /usuarios/login
+                {
+                   "email": "email@email.com",
+                   "senha": "senha"
+                }
+                
+            </remarks>
+            <param name="usuario">Objeto com as informações do usuário que deseja efetuar login</param>
+            <returns>Um status code Ok(200) com o token gerado</returns>
+        </member>
+        <member name="T:Senai_InLock_WebAPI.Domains.JogoDomain">
+            <summary>
+            Classe que representa a entidade Jogos
+            </summary>
+        </member>
+        <member name="M:Senai_InLock_WebAPI.Interfaces.IEstudioRepository.ListarTodos">
+            <summary>
+            Lista todos os estudios e seus respectivos jogos cadastrados no banco de dados
+            </summary>
+            <returns>Uma lista dos estudios e seus respectivos jogos cadastrados</returns>
+        </member>
+        <member name="T:Senai_InLock_WebAPI.Interfaces.IJogoRepository">
+            <summary>
+            Interface relacionada aos Jogos. Define quais serão os métodos executados pela API
+            </summary>
+        </member>
+        <member name="M:Senai_InLock_WebAPI.Interfaces.IJogoRepository.Cadastrar(Senai_InLock_WebAPI.Domains.JogoDomain)">
+            <summary>
+            Cadastra um novo jogo no banco de dados
+            </summary>
+            <param name="jogo">Objeto que contém as informações do jogo que será cadastrado</param>
+        </member>
+        <member name="M:Senai_InLock_WebAPI.Interfaces.IJogoRepository.ListarTodos">
+            <summary>
+            Lista todos os jogos cadastrados no banco de dados
+            </summary>
+            <returns>Uma lista dos jogos cadastrados</returns>
+        </member>
+        <member name="M:Senai_InLock_WebAPI.Interfaces.IJogoRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um jogo que está cadastrado no banco de dados, passando seu id
+            </summary>
+            <param name="id">Id do jogo que será deletado</param>
+        </member>
+        <member name="M:Senai_InLock_WebAPI.Interfaces.IUsuarioRepository.Login(System.String,System.String)">
+            <summary>
+            Faz a validação de email e senha do usuário
+            </summary>
+            <param name="email">Email inserido pelo usuário</param>
+            <param name="senha">Senha do usuário</param>
+            <returns>Objeto contendo as informações do usuário</returns>
+        </member>
+        <member name="T:Senai_InLock_WebAPI.Repositories.JogoRepository">
+            <summary>
+            Classe responsável por executar os métodos relacionados aos Jogos
+            </summary>
+        </member>
+        <member name="M:Senai_InLock_WebAPI.Repositories.JogoRepository.Cadastrar(Senai_InLock_WebAPI.Domains.JogoDomain)">
+            <summary>
+            Cadastra um novo jogo no banco de dados
+            </summary>
+            <param name="jogo">Objeto que contém as informações do jogo que será cadastrado</param>
+        </member>
+        <member name="M:Senai_InLock_WebAPI.Repositories.JogoRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta um jogo que está cadastrado no banco de dados, passando seu id
+            </summary>
+            <param name="id">Id do jogo que será deletado</param>
+        </member>
+        <member name="T:Senai_InLock_WebAPI.Repositories.UsuarioRepository">
+            <summary>
+            Classe responsável pelo repositório dos usuários
+            </summary>
+        </member>
+    </members>
+</doc>
