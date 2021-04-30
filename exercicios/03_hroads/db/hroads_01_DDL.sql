@@ -1,0 +1,63 @@
+CREATE DATABASE SENAI_HROADS_MANHA;
+
+USE SENAI_HROADS_MANHA;
+
+CREATE TABLE TiposDeHabilidades
+(
+	IdTipo	INT PRIMARY KEY IDENTITY,
+	Nome	VARCHAR(150) NOT NULL
+);
+
+CREATE TABLE Habilidades
+(
+	IdHabilidade	INT PRIMARY KEY IDENTITY,
+	IdTipo			INT FOREIGN KEY REFERENCES TiposDeHabilidades (IdTipo),
+	Nome			VARCHAR(150) NOT NULL
+);
+
+CREATE TABLE Classes
+(
+	IdClasse	INT PRIMARY KEY IDENTITY,
+	Nome		VARCHAR(150) NOT NULL
+);
+
+CREATE TABLE ClasseHabilidades
+(
+	IdClasse		INT FOREIGN KEY REFERENCES Classes (IdClasse),
+	IdHabilidade	INT FOREIGN KEY REFERENCES Habilidades (IdHabilidade)
+);
+
+CREATE TABLE Personagens
+(
+	IdPersonagem		INT PRIMARY KEY IDENTITY,
+	IdClasse			INT FOREIGN KEY REFERENCES Classes (IdClasse),
+	Nome				VARCHAR(150) NOT NULL,
+	Vida				INT NOT NULL,
+	Mana				INT NOT NULL,
+	DataDeAtualizacao	DATE NOT NULL,
+	DataDeCriacao		DATE NOT NULL
+);
+GO
+
+
+-- API Update
+
+CREATE TABLE TiposDeUsuarios
+(
+	IdTipoUsuario		INT PRIMARY KEY IDENTITY,
+	Titulo				VARCHAR(50) NOT NULL
+);
+GO
+
+CREATE TABLE Usuarios
+(
+	IdUsuario			INT PRIMARY KEY IDENTITY,
+	Email				VARCHAR(200) NOT NULL UNIQUE,
+	Senha				VARCHAR(200) NOT NULL,
+	IdTipoUsuario		INT FOREIGN KEY REFERENCES TiposDeUsuarios (IdTipoUsuario)
+);
+GO
+
+ALTER TABLE Personagens
+ADD IdUsuario INT FOREIGN KEY REFERENCES Usuarios (IdUsuario);
+GO
